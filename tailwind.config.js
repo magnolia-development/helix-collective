@@ -83,8 +83,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      primary: brandColors.gold,
-      secondary: brandColors.pistachio,
+      primary: brandColors.pistachio,
+      secondary: brandColors.gray,
       neutral: brandColors.mint,
     },
     extend: {

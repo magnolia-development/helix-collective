@@ -1,9 +1,13 @@
 @import "./colors.tailwind.css";
 @import "./components/navbar.tailwind.css";
+@import "./components/index_hero.tailwind.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
+  a.btn-hover-grow {
+    @apply hover:scale-105 transition-transform;
+  }
 }

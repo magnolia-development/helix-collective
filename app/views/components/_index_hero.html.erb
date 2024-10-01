@@ -1,0 +1,19 @@
+<section class="index-hero">
+  <%= video_tag "index_hero_bg.mov", id: "hero-video", autoplay: true, muted: true, loop: true %>
+  <div class="index-hero-container">
+    <div class="index-hero-heading">
+      <h1>Local people solving local problems</h1>
+      <p>We're committed to supporting our robust tech community &mdash; and those that work with them &mdash; within Phoenix. It's our belief that businesses and workers benefit when working together.</p>
+      <a class="btn-hover-grow" href="#">
+        Learn more about Helix
+        <i class="ml-2 fa-sharp-duotone fa-solid fa-arrow-right-long"></i>
+      </a>
+    </div>
+    <div class="index-hero-details">
+      <%= render "components/index_hero/detail_card", icon: "fa-screen-users", title: "Workers", blurb: "Find the support of community for mentorship and insight to help grow your skills and career." %>
+      <%= render "components/index_hero/detail_card", icon: "fa-industry-windows", title: "Businesses", blurb: "Sourcing reliable support (or talent) can be difficult, but a community of known professionals can safeguard you." %>
+      <%= render "components/index_hero/detail_card", icon: "fa-comments-question-check", title: "Community organizers", blurb: "Event planning is full of roller coasters, let's join forces to even it out." %>
+      <%= render "components/index_hero/detail_card", icon: "fa-building-flag", title: "Entreprenuers", blurb: "Get help with the many, many hats that you're wearing all of the time through community." %>
+    </div>
+  </div>
+</section>
