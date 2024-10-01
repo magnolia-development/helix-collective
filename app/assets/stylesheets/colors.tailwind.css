@@ -7,18 +7,70 @@
     /* --color-tertiary: #333; */
     /* --color-quaternary: #111; */
 
-    --brand-orange: 235 101 52;
+    --helix-mint: 228 253 225;
+    --helix-pistachio: 138 203 136;
+    --helix-slate: 100 131 129;
+    --helix-gray: 87 87 97;
+    --helix-gold: 255 191 70;
 
-    --brand-orange-50: 251 227 218;
-    --brand-orange-100: 249 213 199;
-    --brand-orange-200: 246 184 162;
-    --brand-orange-300: 242 156 125;
-    --brand-orange-400: 238 128 88;
-    --brand-orange-500: var(--brand-orange);:
-    --brand-orange-600: 220 77 24;
-    --brand-orange-700: 184 64 20;
-    --brand-orange-800: 147 51 16;
-    --brand-orange-900: 110 38 12;
-    --brand-orange-950: 92 32 10;
+    --helix-mint-50: 253 255 252;
+    --helix-mint-100: 250 255 248;
+    --helix-mint-200: 244 254 243;
+    --helix-mint-300: 239 254 237;
+    --helix-mint-400: 233 253 231;
+    --helix-mint-500: var(--helix-mint);
+    --helix-mint-600: 182 202 180;
+    --helix-mint-700: 137 152 135;
+    --helix-mint-800: 91 101 90;
+    --helix-mint-900: 46 51 44;
+    --helix-mint-950: 23 25 22;
+
+    --helix-pistachio-50: 243 250 242;
+    --helix-pistachio-100: 231 245 231;
+    --helix-pistachio-200: 208 234 207;
+    --helix-pistachio-300: 185 224 184;
+    --helix-pistachio-400: 161 213 160;
+    --helix-pistachio-500: var(--helix-pistachio);
+    --helix-pistachio-600: 109 162 109;
+    --helix-pistachio-700: 82 122 82;
+    --helix-pistachio-800: 56 81 53;
+    --helix-pistachio-900: 28 41 27;
+    --helix-pistachio-950: 14 20 13;
+
+    --helix-slate-50: 241 243 242;
+    --helix-slate-100: 224 230 230;
+    --helix-slate-200: 193 205 205;
+    --helix-slate-300: 163 181 179;
+    --helix-slate-400: 131 156 154;
+    --helix-slate-500: var(--helix-slate);
+    --helix-slate-600: 80 105 103;
+    --helix-slate-700: 60 79 77;
+    --helix-slate-800: 39 52 52;
+    --helix-slate-900: 30 39 39;
+    --helix-slate-950: 20 26 26;
+
+    --helix-gray-50: 238 238 239;
+    --helix-gray-100: 221 221 223;
+    --helix-gray-200: 188 188 192;
+    --helix-gray-300: 154 154 159;
+    --helix-gray-400: 121 121 129;
+    --helix-gray-500: var(--helix-gray);
+    --helix-gray-600: 70 70 78;
+    --helix-gray-700: 52 52 57;
+    --helix-gray-800: 35 35 39;
+    --helix-gray-900: 26 26 29;
+    --helix-gray-950: 17 17 19;
+
+    --helix-gold-50: 255 242 219;
+    --helix-gold-100: 255 236 200;
+    --helix-gold-200: 255 229 181;
+    --helix-gold-300: 255 217 145;
+    --helix-gold-400: 255 204 107;
+    --helix-gold-500: var(--helix-gold);
+    --helix-gold-600: 204 153 55;
+    --helix-gold-700: 153 116 43;
+    --helix-gold-800: 102 76 29;
+    --helix-gold-900: 77 57 21;
+    --helix-gold-950: 51 39 14;
   }
 }
