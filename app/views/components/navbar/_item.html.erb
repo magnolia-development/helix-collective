@@ -1,0 +1,10 @@
+<%-
+  return unless defined?(nav_link) && defined?(nav_text)
+  aria_current = current_page?(nav_link) ? "aria-current=page" : ""
+%>
+<li>
+  <a href="<%= nav_link %>" <%= aria_current %>>
+    <%= nav_text %>
+  </a>
+</li>
+
