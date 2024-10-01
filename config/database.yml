@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: localhost
+  port: 5432
+  username: <%= ENV['HELIX_COLLECTIVE_DATABASE_USER'] %>
+  password: <%= ENV['HELIX_COLLECTIVE_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: helix_collective_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: helix_collective_test
+
+production:
+  <<: *default
+  database: helix_collective_production
+  username: helix_collective
+  url: <%= ENV['DATABASE_URL'] %>
+  password: <%= ENV['HELIX_COLLECTIVE_DATABASE_PASSWORD'] %>
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>

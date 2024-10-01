@@ -1,0 +1,19 @@
+databases:
+  - name: helix_collective
+    databaseName: helix_collective
+    user: helix_collective
+
+services:
+  - type: web
+    name: helix_collective
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: helix_collective
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
