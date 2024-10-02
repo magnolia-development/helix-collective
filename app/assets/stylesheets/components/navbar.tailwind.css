@@ -2,29 +2,60 @@
 
 @layer components {
   header nav {
-    @apply bg-helix-gold border-gray-200 dark:bg-gray-800 text-helix-gray h-full;
+    @apply bg-helix-gold border-gray-200 dark:bg-gray-800 text-helix-gray h-full shadow-md;
 
     .main-nav-container {
-      /* @apply flex flex-wrap justify-between items-center mx-auto max-w-screen-xl; */
       @apply h-max flex flex-row flex-wrap lg:flex-nowrap gap-x-2 items-center mx-auto max-w-screen-xl;
     }
 
     .main-nav-links {
       @apply grow justify-center self-stretch items-center w-full order-2 lg:order-1 lg:w-auto;
 
-      ul, li {
+      > ul {
         @apply self-stretch items-center;
+
+        > li {
+          @apply flex flex-col gap-y-0 self-stretch items-center;
+
+          .main-nav-dropdown {
+            @apply absolute shadow-md z-50 hidden hover:block w-full bg-white top-[72px] left-0;
+          }
+
+          &:hover {
+            .main-nav-dropdown {
+              @apply block;
+            }
+          }
+
+          > a {
+            @apply px-2 h-[100%] content-center w-full md:w-auto hover:text-helix-gray text-start py-2 px-4 border-b-2 border-helix-gold hover:border-helix-gray;
+
+            &[aria-current] {
+              @apply text-helix-gray bg-helix-mint/50 hover:bg-helix-pistachio-300/75 border-b-2 border-helix-mint-500 dark:bg-gray-700 dark:text-white dark:border-gray-700;
+            }
+          }
+        }
       }
 
-      li {
-        @apply flex flex-col gap-y-0 self-stretch items-center;
-      }
+      .mega-columns {
+        @apply flex flex-row gap-4 place-items-start max-w-screen-lg mx-auto p-4;
+        --fa-primary-color: rgb(var(--helix-slate-500));
+        --fa-secondary-color: rgb(var(--helix-slate-500));
 
-      a {
-        @apply px-2 h-[100%] content-center w-full md:w-auto hover:text-helix-gray text-start py-2 px-4 border-b-2 border-helix-gold hover:border-helix-gray;
+        .mega-column {
+          @apply grow flex flex-col gap-2 justify-start;
 
-        &[aria-current] {
-          @apply text-helix-gray bg-helix-mint/50 hover:bg-helix-pistachio-300/75 border-b-2 border-helix-mint-500 dark:bg-gray-700 dark:text-white dark:border-gray-700;
+          p {
+            @apply font-bold text-helix-gray-700;
+          }
+        }
+
+        li {
+          @apply place-items-start my-2;
+        }
+
+        a {
+          @apply text-helix-slate hover:text-helix-gray-700 py-2 px-4;
         }
       }
     }
