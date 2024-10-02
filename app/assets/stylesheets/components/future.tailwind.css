@@ -35,5 +35,9 @@
         --fa-secondary-opacity: 1;
       }
     }
+
+    img {
+      @apply hidden mb-4 w-full lg:mb-0 lg:flex rounded-lg border-[6px] border-helix-slate;
+    }
   }
 }
