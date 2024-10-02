@@ -2,14 +2,14 @@
 
 @layer components {
   .index-hero {
-    @apply bg-black/30 text-white h-[600px] md:h-[800px] max-h-screen flex items-end tracking-wide items-center md:items-end;
+    @apply bg-black/30 text-white h-auto md:h-[800px] flex items-end tracking-wide items-center md:items-end;
 
     h1 {
       @apply mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
     }
 
     video {
-      @apply w-full h-[600px] md:h-[800px] max-h-screen object-cover absolute z-[-1] object-center;
+      @apply w-full h-full md:h-[800px] max-h-screen object-cover absolute z-[-1] object-center;
     }
 
     .index-hero-container {
