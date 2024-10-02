@@ -1,0 +1,38 @@
+<section class="future">
+  <div class="future-container">
+    <div class="future-grid">
+      <div class="future-details">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">The going isn't always easy</h2>
+        <p class="future-description-text">And we know that. Which is why we have a plan for the future, as well as some guardrails to keep us on the right path.</p>
+        <p class="mb-8 font-light lg:text-xl">We're growing towards:</p>
+        <ul role="list" class="goals">
+          <%
+            [
+              "Expanding Phoenix's community-based third-spaces",
+              "Hosting exciting industry-leading conferences and events",
+              "Driving measurable impact to Phoenix's local community and economy",
+
+            ].each do |goal|
+          %>
+            <%= render "components/future/goal", goal: goal, icon: "fa-hexagon-check" %>
+          <% end %>
+        </ul>
+        <p class="mb-8 font-light lg:text-xl">While avoiding these pitfalls:</p>
+        <ul role="list" class="antigoals">
+          <%
+            [
+              "Allowing external investors to dictate our actions",
+              "Selling out to a VC firm or other similar entity",
+              "Pursuing growth for the sake of growth",
+
+            ].each do |antigoal|
+          %>
+            <%= render "components/future/goal", goal: antigoal, icon: "fa-hexagon-xmark" %>
+          <% end %>
+        </ul>
+
+      </div>
+      <%= image_tag "ford_canyon_path.jpg", class: "hidden mb-4 w-full lg:mb-0 lg:flex rounded-lg", alt: "A serene image of a path within at Ford Canyon headed from flat land up into the mountains." %>
+    </div>
+  </div>
+</section>
