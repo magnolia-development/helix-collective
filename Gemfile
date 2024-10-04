@@ -5,6 +5,7 @@ source "https://rubygems.org"
 ruby "3.3.5"
 
 gem "bootsnap", require: false
+gem "cancancan"
 gem "cssbundling-rails"
 gem "devise"
 gem "dotenv"
