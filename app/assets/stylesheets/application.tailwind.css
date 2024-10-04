@@ -3,6 +3,7 @@
 @import "./components/future.tailwind.css";
 @import "./components/index_hero.tailwind.css";
 @import "./components/navbar.tailwind.css";
+@import "./components/subpage_index_hero.tailwind.css";
 
 @tailwind base;
 @tailwind components;
@@ -23,5 +24,29 @@
 
   .right-page-nudge {
     padding-right: var(--page-nudge) !important;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center py-3 px-5 font-medium text-center text-black rounded-lg bg-primary hover:bg-primary-300 focus:ring-4 focus:outline-none focus:ring-primary-900 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:scale-105 transition;
+
+    &.small {
+      @apply font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5;
+    }
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center py-3 px-5 font-medium text-center text-white rounded-lg bg-secondary hover:bg-secondary-700 hover:shadow focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 hover:scale-105 transition;
+
+    &.small {
+      @apply font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5;
+    }
+  }
+
+  .tertiary-button {
+    @apply inline-flex items-center py-3 px-5 font-medium text-center text-secondary border-2 border-secondary rounded-lg bg-transparent hover:text-secondary-700 hover:border-secondary-700 hover:shadow focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 hover:scale-105 transition;
+
+    &.small {
+      @apply font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5;
+    }
   }
 }

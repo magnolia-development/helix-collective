@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class HomeController < ApplicationController
-  def index
-    @example_constant = Constants.example.value
-  end
+  def index; end
+  def solve_index; end
+  def solve_page; end
 end
 
