@@ -51,7 +51,12 @@
         }
 
         li {
-          @apply place-items-start my-2;
+          @apply place-items-start my-2 hover:scale-105 transition;
+
+          &:hover {
+            --fa-primary-color: rgb(var(--helix-pistachio-500));
+            --fa-secondary-color: rgb(var(--helix-pistachio-500));
+          }
         }
 
         a {
@@ -83,6 +88,10 @@
 
           &:hover {
             @apply scale-105 transition-transform;
+          }
+
+          &:hover .subnav-tile-image {
+            @apply border-helix-pistachio;
           }
         }
       }
