@@ -46,7 +46,7 @@
           @apply grow flex flex-col gap-2 justify-start;
 
           p {
-            @apply font-bold text-helix-gray-700;
+            @apply font-bold text-black;
           }
         }
 
@@ -55,7 +55,35 @@
         }
 
         a {
-          @apply text-helix-slate hover:text-helix-gray-700 py-2 px-4;
+          @apply text-black hover:text-helix-slate py-2 px-4;
+        }
+      }
+
+      .tile-row {
+        @apply flex flex-row space-x-8 py-8;
+
+        li {
+          @apply grow flex flex-col justify-start;
+
+          a {
+            @apply text-black hover:text-helix-slate;
+
+            .tile-title {
+              @apply font-bold mb-2;
+            }
+
+            .tile-description {
+              @apply text-sm;
+            }
+          }
+
+          .subnav-tile-image {
+            @apply w-full h-44 bg-center bg-no-repeat bg-cover rounded-md mb-2 border-4 border-helix-slate;
+          }
+
+          &:hover {
+            @apply scale-105 transition-transform;
+          }
         }
       }
     }

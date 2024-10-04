@@ -27,10 +27,14 @@ module ApplicationHelper
       } },
       { nav_link: "/learn", nav_text: "Learn", sub_nav: {
         style: "tile_row", items: [
-          { nav_link: "/learn/user-groups", nav_text: "Meetups" },
-          { nav_link: "/learn/resources", nav_text: "Resource Library" },
-          { nav_link: "/learn/workshops", nav_text: "Workshops" },
-          { nav_link: "/learn/case-studies", nav_text: "Case Studies" },
+          { nav_link: "/learn/user-groups", nav_text: "Meetups", image: "subnav_tile_meetups.jpg",
+            sub_description: "Find local coworking groups or user groups" },
+          { nav_link: "/learn/resources", nav_text: "Resource Library", image: "subnav_tile_resources.jpg",
+            sub_description: "Browse our library of articles and other learning materials" },
+          { nav_link: "/learn/events", nav_text: "Events", image: "subnav_tile_workshops.jpg",
+            sub_description: "Attend one our upcoming workshops or conferences" },
+          { nav_link: "/learn/case-studies", nav_text: "Case Studies", image: "subnav_tile_case_studies.jpg",
+            sub_description: "Read about the impact we've had for others like you" },
         ]
       } },
       { nav_link: "/join", nav_text: "Join", sub_nav: {
