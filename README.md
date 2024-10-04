@@ -8,6 +8,8 @@
 > - Ruby 3.3.2 ([chruby](https://github.com/postmodern/chruby) is recommended for managing Ruby versions)
 > - Rails 7.1 (follow [this guide](https://guides.rubyonrails.org/development_dependencies_install.html) to install)
 > - Postgres (either via brew or [Postgres.app](https://postgresapp.com/))
+> - ImageMagick
+> - Node.js 16+
 
 Once you're ready to go, you'll need to make sure to install via both Bundler and NPM:
 
@@ -21,6 +23,13 @@ Local development uses Foreman to run two paralell processes: one for the Rails 
 ```bash
 bin/dev
 ```
+
+You'll then want to configure your local admin:
+
+1. Make a copy of `.env` from `.env.example`, and update these values:
+    - `HELIX_COLLECTIVE_ADMIN_EMAIL` (your email)
+    - `HELIX_COLLECTIVE_ADMIN_PASSWORD` (a simple password for local development)
+2. Run `rails db:seed` to create the admin user
 
 > [!TIP]
 > It's also recommended that you pull the latest changes from the `main` branch and rebase them into your working branch every day to avoid merge conflicts.
