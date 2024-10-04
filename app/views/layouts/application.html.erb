@@ -20,6 +20,20 @@
 
   <body>
     <%= render "components/navbar" %>
+    <% if defined?(notice) || defined?(alert) %>
+      <div class="container">
+        <% if notice %>
+          <div class="notice">
+            <%= notice %>
+          </div>
+        <% end %>
+        <% if alert %>
+          <div class="alert">
+            <%= alert %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
     <%= yield %>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
