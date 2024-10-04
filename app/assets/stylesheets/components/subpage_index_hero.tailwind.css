@@ -2,7 +2,7 @@
 
 @layer components {
   section.subpage-index-hero {
-    @apply overflow-hidden relative bg-white dark:bg-gray-900;
+    @apply overflow-hidden relative bg-helix-slate-200 dark:bg-helix-slate-700;
 
     > .container {
       @apply gap-8 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 xl:grid xl:grid-cols-12;

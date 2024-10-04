@@ -1,5 +1,6 @@
 @import "./colors.tailwind.css";
 
+@import "./components/feature_cards.tailwind.css";
 @import "./components/future.tailwind.css";
 @import "./components/index_hero.tailwind.css";
 @import "./components/navbar.tailwind.css";

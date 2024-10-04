@@ -1,0 +1,10 @@
+<%= link_to link do %>
+  <div class="p-6 bg-white rounded shadow dark:bg-gray-800 h-full flex flex-col">
+    <div class="icon-wrapper">
+      <i class="fa-duotone fa-solid <%= icon %>"></i>
+    </div>
+    <h3 class="mb-2 text-xl font-bold dark:text-white"><%= title %></h3>
+    <p class="font-light text-gray-500 dark:text-gray-400 mb-4"><%= blurb %></p>
+    <p class="card-cta">Learn more <i class="fa-duotone fa-solid fa-arrow-right"></i></p>
+  </div>
+<% end %>

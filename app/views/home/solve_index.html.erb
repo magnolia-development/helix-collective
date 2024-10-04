@@ -17,10 +17,17 @@
     </a>
   </div>
 <% end %>
-<div class="bg-helix-slate-200">
+<%= render "components/why_us" %>
+<div class="bg-helix-pistachio-200">
   <%= render "components/stats_bar", stats: [
     { title: "Small Business", count: "20+" },
     { title: "Community Members", count: "1250+" },
     { title: "Projects", count: "35+" },
   ] %>
 </div>
+<%= render "components/feature_cards", title: "Industry experience", subtitle: "Our team has a wide range of experience in the tech industry, and we're proud to bring that to bear on every project we take on.", cards: [
+  { icon: "fa-stethoscope", title: "Healthcare", blurb: "We can navigate HIPAA compliance and help you build the secure, stable, highly-available services you need so you can get back to helping people.", link: "/solve/healthcare" },
+  { icon: "fa-school", title: "Ed Tech", blurb: "We take the information security of students and faculty seriously, and it's our mission to help you deliver the best possible learning experience.", link: "/solve/ed-tech" },
+  { icon: "fa-hands-holding-heart", title: "Non-profits", blurb: "The rigors of the grant cycle and reporting is familiar to us, and we love to help our non-profit partners shine.", link: "/solve/nonprofits" },
+  { icon: "fa-display-chart-up-circle-dollar", title: "E-commerce", blurb: "Our data-driven approach and careful planning ensures that your bottom line is protected while you focus on the value you provide your customers.", link: "/solve/e-commerce" },
+] %>
