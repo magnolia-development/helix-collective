@@ -1,0 +1,21 @@
+<div class="main-nav-dropdown">
+  <div class="max-w-screen-xl mx-auto">
+    <ul class="icon-grid">
+      <% items.each do |nav_item| %>
+        <li>
+          <%= link_to nav_item[:nav_link], class: "subnav-icon-item" do %>
+            <div class="icon-tile-icon">
+              <span>
+                <i class="fa-duotone fa-solid <%= nav_item[:icon] %>"></i>
+              </span>
+            </div>
+            <div class="icon-tile-title">
+              <p class="tile-title"><%= nav_item[:nav_text] %></p>
+              <p class="tile-description"><%= nav_item[:nav_details] %></p>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

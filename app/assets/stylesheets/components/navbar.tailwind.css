@@ -86,6 +86,36 @@
           }
         }
       }
+
+      .icon-grid {
+        @apply grid grid-cols-4 gap-4 py-8;
+
+        .subnav-icon-item {
+          @apply flex flex-row gap-2 hover:scale-105 transition;
+
+          .icon-tile-icon {
+            span {
+              @apply block bg-helix-slate rounded-full p-2 h-12 w-12 text-white text-center mt-1 content-center text-lg;
+            }
+          }
+
+          .icon-tile-title {
+            @apply grow;
+
+            .tile-title {
+              @apply font-bold mb-2;
+            }
+
+            .tile-description {
+              @apply font-light;
+            }
+          }
+
+          &:hover .icon-tile-icon span {
+            @apply bg-helix-pistachio;
+          }
+        }
+      }
     }
 
     .main-nav-actions {
