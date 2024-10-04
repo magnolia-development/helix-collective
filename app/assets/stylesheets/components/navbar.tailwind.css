@@ -65,7 +65,7 @@
       }
 
       .tile-row {
-        @apply flex flex-col md:flex-row space-y-4 md:space-x-8 px-4 md:px-0 py-4;
+        @apply flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 px-4 md:px-0 py-4 md:py-6;
 
         li {
           @apply grow flex flex-col justify-start;
@@ -78,7 +78,7 @@
             }
 
             .tile-description {
-              @apply text-sm;
+              @apply text-sm font-light;
             }
           }
 
@@ -118,7 +118,7 @@
             }
 
             .tile-description {
-              @apply text-sm md:text-base md:font-light;
+              @apply text-sm font-light;
             }
           }
 
