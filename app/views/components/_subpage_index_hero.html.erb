@@ -1,0 +1,14 @@
+<section class="subpage-index-hero">
+  <div class="container">
+    <div class="col-span-8">
+      <h1><%= title %></h1>
+      <p class="subpage-index-hero-subtitle"><%= subtitle %></p>
+      <div class="gap-16 items-center sm:flex">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="hidden absolute top-0 right-0 w-1/3 h-full xl:block">
+      <%= image_tag image, class: "object-cover w-full h-full", alt: image_alt %>
+    </div>
+  </div>
+</section>

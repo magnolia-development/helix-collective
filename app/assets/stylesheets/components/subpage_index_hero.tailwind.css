@@ -1,0 +1,19 @@
+@tailwind components;
+
+@layer components {
+  section.subpage-index-hero {
+    @apply overflow-hidden relative bg-helix-slate-200 dark:bg-helix-slate-700;
+
+    > .container {
+      @apply gap-8 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 xl:grid xl:grid-cols-12;
+    }
+
+    h1 {
+      @apply mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
+    }
+
+    .subpage-index-hero-subtitle {
+      @apply mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<%= render "components/subpage_index_hero", title: "We solve problems", subtitle: "Our network gives us the freedom to lean into tough problems knowing we've got the skills and expertise to action on innovative solutions.", image: "solve_index_hero.jpg", image_alt: "A confident project manager smiles as she works with her team." do %>
+  <div class="mb-8 text-gray-500 sm:mb-0 dark:text-gray-400">
+    <i class="fa-duotone fa-solid fa-calendar text-2xl block mb-4"></i>
+    <h2 class="mb-3 text-xl font-semibold text-gray-900 dark:text-white">Chat with us</h2>
+    <p class="mb-4 font-light">Nothing makes us happier than an opportunity to serve our community.</p>
+    <a href="#" class="primary-button">
+      Chat with an expert
+      <i class="ml-2 fa-duotone fa-solid fa-arrow-right-long"></i>
+    </a>
+  </div>
+  <div class="text-gray-500 dark:text-gray-400">
+    <i class="fa-duotone fa-solid fa-book text-2xl block mb-4"></i>
+    <h2 class="mb-3 text-xl font-semibold text-gray-900 dark:text-white">Learn more</h2>
+    <p class="mb-4 font-light">We're proud of the expertise we've curated, and invite you to see for yourself.</p>
+    <a href="#" class="tertiary-button">
+      Learn more about us
+    </a>
+  </div>
+<% end %>
+<%= render "components/why_us" %>
+<div class="bg-helix-pistachio-200">
+  <%= render "components/stats_bar", stats: [
+    { title: "Small Business", count: "20+" },
+    { title: "Community Members", count: "1250+" },
+    { title: "Projects", count: "35+" },
+  ] %>
+</div>
+<%= render "components/feature_cards", title: "Industry experience", subtitle: "Our team has a wide range of experience in the tech industry, and we're proud to bring that to bear on every project we take on.", cards: [
+  { icon: "fa-stethoscope", title: "Healthcare", blurb: "We can navigate HIPAA compliance and help you build the secure, stable, highly-available services you need so you can get back to helping people.", link: "/solve/healthcare" },
+  { icon: "fa-school", title: "Ed Tech", blurb: "We take the information security of students and faculty seriously, and it's our mission to help you deliver the best possible learning experience.", link: "/solve/ed-tech" },
+  { icon: "fa-hands-holding-heart", title: "Non-profits", blurb: "The rigors of the grant cycle and reporting is familiar to us, and we love to help our non-profit partners shine.", link: "/solve/nonprofits" },
+  { icon: "fa-display-chart-up-circle-dollar", title: "E-commerce", blurb: "Our data-driven approach and careful planning ensures that your bottom line is protected while you focus on the value you provide your customers.", link: "/solve/e-commerce" },
+] %>
+<%= render "components/feature_cards", title: "Tailored solutions", subtitle: "We know that every business is unique, and we're ready to help you find the right solution for your needs.", cards: [
+  { icon: "fa-megaphone", title: "Marketing", blurb: "We've got the marketing professionals you need to grow your audience.", link: "/solve/marketing" },
+  { icon: "fa-flask-gear", title: "Operations", blurb: "Understanding how systems work means more than just code &mdash; it also means your business processes.", link: "/solve/operations" },
+  { icon: "fa-browser", title: "Web Design & UX", blurb: "Your website is your hardest working asset, even for non-technical businesses. Let's make the experience an incredible one.", link: "/solve/design" },
+  { icon: "fa-shield-halved", title: "Cyber Security", blurb: "Our experts continually stay at the forefront of cutting edge so you don't have to.", link: "/solve/cyber-security" },
+  { icon: "fa-head-side-heart", title: "Digital Accessibility", blurb: "We believe that every experience on the web should be usable by everyone, no matter their abilities.", link: "/solve/accessibility" },
+  { icon: "fa-sparkles", title: "AI & Emerging Tech", blurb: "No matter how good AI gets, we know that it's useless without the right blend of human ingenuity to temper it.", link: "/solve/ai" },
+] %>

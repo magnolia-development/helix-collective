@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root to: "home#index"
+
+  get "/solve" => "home#solve_index"
+  get "/solve/:id" => "home#solve_page"
 end
 
