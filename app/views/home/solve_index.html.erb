@@ -1,4 +1,4 @@
-<%= render "components/subpage_index_hero", title: "We solve problems", subtitle: "Our network gives us the freedom to lean into tough problems knowing we've got the skills and expertise to action on innovative solutions." do %>
+<%= render "components/subpage_index_hero", title: "We solve problems", subtitle: "Our network gives us the freedom to lean into tough problems knowing we've got the skills and expertise to action on innovative solutions.", image: "solve_index_hero.jpg", image_alt: "A confident project manager smiles as she works with her team." do %>
   <div class="mb-8 text-gray-500 sm:mb-0 dark:text-gray-400">
     <i class="fa-duotone fa-solid fa-calendar text-2xl block mb-4"></i>
     <h2 class="mb-3 text-xl font-semibold text-gray-900 dark:text-white">Chat with us</h2>
@@ -17,3 +17,10 @@
     </a>
   </div>
 <% end %>
+<div class="bg-helix-slate-200">
+  <%= render "components/stats_bar", stats: [
+    { title: "Small Business", count: "20+" },
+    { title: "Community Members", count: "1250+" },
+    { title: "Projects", count: "35+" },
+  ] %>
+</div>

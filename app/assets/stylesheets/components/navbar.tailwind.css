@@ -131,7 +131,6 @@
 
     .main-nav-actions {
       @apply flex items-center lg:order-2 py-4;
-
     }
   }
 }
