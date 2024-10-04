@@ -45,10 +45,11 @@ Maglev.configure do |config|
   # Editor UI authentication (https://docs.maglev.dev/guides/setup-authentication)
   # config.is_authenticated = :editor_allowed? # name of any protected method from your Rails application controller
   # config.is_authenticated = ->(site) { current_user&.role == 'editor' }
+  config.is_authenticated = ->(_site) { can?(:manage, Maglev::Site) }
 
   # Admin UI authentication (https://docs.maglev.dev/guides/setup-authentication)
-  config.admin_username = Rails.env.production? ? ENV.fetch('MAGLEV_ADMIN_USERNAME') : nil
-  config.admin_password = Rails.env.production? ? ENV.fetch('MAGLEV_ADMIN_PASSWORD') : nil
+  # config.admin_username = Rails.env.production? ? ENV.fetch("MAGLEV_ADMIN_USERNAME") : nil
+  # config.admin_password = Rails.env.production? ? ENV.fetch("MAGLEV_ADMIN_PASSWORD") : nil
 
   # Uploader engine (:active_storage is only supported for now)
   config.uploader = :active_storage
@@ -81,3 +82,4 @@ Maglev.configure do |config|
   # existing pages of the application.
   # config.reserved_paths = %w(products sign-in search posts/*)
 end
+
