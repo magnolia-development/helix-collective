@@ -9,7 +9,19 @@
 @tailwind utilities;
 
 @layer components {
+  :root {
+    --page-nudge: calc((100vw - theme(screens.xl)) / 2);
+  }
+
   a.btn-hover-grow {
     @apply hover:scale-105 transition-transform;
+  }
+
+  .left-page-nudge {
+    padding-left: var(--page-nudge) !important;
+  }
+
+  .right-page-nudge {
+    padding-right: var(--page-nudge) !important;
   }
 }

@@ -86,6 +86,7 @@ module.exports = {
       primary: brandColors.pistachio,
       secondary: brandColors.gray,
       neutral: brandColors.mint,
+      inherit: "inherit",
     },
     extend: {
       fontFamily: ["Inter var", ...defaultTheme.fontFamily.sans],

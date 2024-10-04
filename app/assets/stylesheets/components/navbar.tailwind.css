@@ -2,29 +2,129 @@
 
 @layer components {
   header nav {
-    @apply bg-helix-gold border-gray-200 dark:bg-gray-800 text-helix-gray h-full;
+    @apply bg-helix-gold border-gray-200 dark:bg-gray-800 text-helix-gray h-full shadow-md;
 
     .main-nav-container {
-      /* @apply flex flex-wrap justify-between items-center mx-auto max-w-screen-xl; */
       @apply h-max flex flex-row flex-wrap lg:flex-nowrap gap-x-2 items-center mx-auto max-w-screen-xl;
     }
 
     .main-nav-links {
       @apply grow justify-center self-stretch items-center w-full order-2 lg:order-1 lg:w-auto;
 
-      ul, li {
+      > ul {
         @apply self-stretch items-center;
+
+        > li {
+          @apply flex flex-col gap-y-0 self-stretch items-center;
+
+          .main-nav-dropdown {
+            @apply md:absolute md:shadow-md z-50 md:hidden hover:block w-full bg-helix-gold-200 md:bg-white md:top-[72px] md:left-0;
+          }
+
+          &:hover {
+            .main-nav-dropdown {
+              @apply md:block;
+            }
+          }
+
+          > a {
+            @apply px-2 h-[100%] content-center w-full md:w-auto hover:text-helix-gray text-start py-2 px-4 border-b-2 border-helix-gold hover:border-helix-gray;
+
+            &[aria-current] {
+              @apply text-helix-gray bg-helix-mint/50 hover:bg-helix-pistachio-300/75 border-b-2 border-helix-mint-500 dark:bg-gray-700 dark:text-white dark:border-gray-700;
+            }
+          }
+        }
       }
 
-      li {
-        @apply flex flex-col gap-y-0 self-stretch items-center;
+      .mega-columns {
+        @apply flex flex-col md:flex-row gap-4 place-items-start mx-auto p-4;
+        --fa-primary-color: rgb(var(--helix-slate-500));
+        --fa-secondary-color: rgb(var(--helix-slate-500));
+
+        .mega-column {
+          @apply grow flex flex-col gap-2 justify-start;
+
+          p {
+            @apply font-bold md:text-black;
+          }
+        }
+
+        li {
+          @apply place-items-start my-2 hover:scale-105 transition;
+
+          &:hover {
+            --fa-primary-color: rgb(var(--helix-pistachio-500));
+            --fa-secondary-color: rgb(var(--helix-pistachio-500));
+          }
+        }
+
+        a {
+          @apply md:text-black hover:text-helix-slate py-2 px-4;
+        }
       }
 
-      a {
-        @apply px-2 h-[100%] content-center w-full md:w-auto hover:text-helix-gray text-start py-2 px-4 border-b-2 border-helix-gold hover:border-helix-gray;
+      .tile-row {
+        @apply flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 px-4 md:px-0 py-4 md:py-6;
 
-        &[aria-current] {
-          @apply text-helix-gray bg-helix-mint/50 hover:bg-helix-pistachio-300/75 border-b-2 border-helix-mint-500 dark:bg-gray-700 dark:text-white dark:border-gray-700;
+        li {
+          @apply grow flex flex-col justify-start;
+
+          a {
+            @apply md:text-black hover:text-helix-slate;
+
+            .tile-title {
+              @apply font-bold mb-2;
+            }
+
+            .tile-description {
+              @apply text-sm font-light;
+            }
+          }
+
+          .subnav-tile-image {
+            @apply hidden md:block w-full h-44 bg-center bg-no-repeat bg-cover rounded-md mb-2 border-4 border-helix-slate;
+          }
+
+          &:hover {
+            @apply md:scale-105 transition;
+          }
+
+          &:hover .subnav-tile-image {
+            @apply border-helix-pistachio;
+          }
+        }
+      }
+
+      .icon-grid {
+        @apply grid grid-cols-1 md:grid-cols-4 gap-4 p-4 md:px-0 md:py-8;
+
+        .subnav-icon-item {
+          @apply flex flex-row gap-2 md:hover:scale-105 transition hover:text-helix-slate md:hover:text-inherit;
+
+          .icon-tile-icon {
+            @apply hidden md:flex;
+
+            span {
+              @apply block bg-helix-slate rounded-full p-2 h-12 w-12 text-white text-center mt-1 content-center text-lg;
+            }
+          }
+
+          .icon-tile-title {
+            @apply grow;
+
+            .tile-title {
+              @apply font-bold mb-2;
+            }
+
+            .tile-description {
+              @apply text-sm font-light;
+            }
+          }
+
+          &:hover .icon-tile-icon span {
+            @apply bg-helix-pistachio;
+          }
         }
       }
     }

@@ -1,0 +1,27 @@
+<div class="main-nav-dropdown">
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    <div class="col-span-2 left-page-nudge">
+      <div class="mega-columns">
+        <% items.each do |nav_item| %>
+          <div class="mega-column">
+            <p><%= nav_item[:group_name] %></p>
+            <ul>
+              <% nav_item[:items].each do |item| %>
+                <li>
+                  <i class="fa-duotone fa-solid fa-angles-right"></i>
+                  <a href="<%= item[:nav_link] %>">
+                    <%= item[:nav_text] %>
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="hidden md:block col-span-1 bg-helix-slate-200 p-6 text-black right-page-nudge">
+      <p class="font-bold text-lg mb-8"><%= subtitle %></p>
+      <p><%= sub_description %></p>
+    </div>
+  </div>
+</div>

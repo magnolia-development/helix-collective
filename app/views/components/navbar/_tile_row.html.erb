@@ -1,0 +1,15 @@
+<div class="main-nav-dropdown">
+  <div class="max-w-screen-xl mx-auto">
+    <ul class="tile-row">
+      <% items.each do |nav_item| %>
+        <li class="subnav-tile">
+          <%= link_to nav_item[:nav_link] do %>
+            <div style="background-image: url('<%= image_path nav_item[:image] %>')" class="subnav-tile-image"></div>
+            <p class="tile-title"><%= nav_item[:nav_text] %></p>
+            <p class="tile-description"><%= nav_item[:sub_description] %></p>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

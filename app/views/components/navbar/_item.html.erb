@@ -6,5 +6,9 @@
   <a href="<%= nav_link %>" <%= aria_current %>>
     <%= nav_text %>
   </a>
+  <% if defined?(sub_nav) && sub_nav.length > 0 %>
+    <%- sub_nav[:style] ||= "icon_grid" %>
+    <%= render "components/navbar/#{sub_nav[:style]}", sub_nav %>
+  <% end %>
 </li>
 
