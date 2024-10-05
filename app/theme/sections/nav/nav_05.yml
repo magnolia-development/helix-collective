@@ -5,7 +5,7 @@ insert_button: true
 insert_at: top
 singleton: true
 
-blocks_label: "Helix Marketing Navigation"
+blocks_label: "Navigation Options"
 blocks_presentation: "tree"
 
 settings:
@@ -45,20 +45,20 @@ blocks:
       - label: "Tile Row"
         value: "tile_row"
     default: "none"
-
-# - name: "Subnav Link Group"
-#   type: subnav_link_group
-#   settings:
-#   - label: "Group Title"
-#     id: link_group_title
-#     type: text
-#     default: "Link Group Title"
-#   - label: "Links"
-#     id: link_group
-#     type: link_group
-#     accept: ["link_item"]
-#     limit: 1
-#     settings: []
+  - label: "Subnav Links"
+    id: children
+    type: link
+    settings: []
+    # - label: "Group Title"
+    #   id: link_group_title
+    #   type: text
+    #   default: "Link Group Title"
+    # - label: "Links"
+    #   id: link_group
+    #   type: link_group
+    #   accept: ["link_item"]
+    #   limit: 1
+    #   settings: []
 
 - name: "Buttons"
   type: button_group
@@ -97,7 +97,7 @@ sample:
         text: "Solve"
         href: "/solve"
       subnav_type: "mega_menu"
-      children:
+      subnav_links:
       - type: link_item
         link:
           text: "child 1"
@@ -119,11 +119,13 @@ sample:
         text: "Learn"
         href: "/learn"
       subnav_type: "tile_row"
+      subnav_links: []
     - type: link_item
       link:
         text: "Join"
         href: "/join"
       subnav_type: "icon_grid"
+      subnav_links: []
   - type: button_group
     settings: []
     children:
