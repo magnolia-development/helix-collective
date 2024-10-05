@@ -8,6 +8,8 @@ description: "HyperUI components converted into Maglev sections"
 section_categories:
 - name: "Navigation"
   id: nav
+- name: "Hero"
+  id: hero
 - name: "Banner"
   id: banner
 - name: "Call to action"

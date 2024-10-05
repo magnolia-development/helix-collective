@@ -1,0 +1,77 @@
+name: "Index hero"
+category: hero
+site_scoped: false
+insert_button: true
+singleton: true
+
+settings:
+- label: "Title"
+  id: title
+  type: text
+  default: My awesome title
+- label: "Details"
+  id: details
+  type: text
+  html: true
+  line_break: true
+  nb_rows: 5
+- label: "CTA Button"
+  id: cta_button
+  type: link
+  default: 
+    text: "Button"
+    href: "#"
+
+blocks:
+- label: "Tiles"
+  type: tile_item
+  settings:
+  - label: "Icon"
+    id: icon
+    type: icon
+    default: "fa-rocket"
+  - label: "Title"
+    id: title
+    type: text
+    default: "Title"
+  - label: "Description"
+    id: description
+    type: text
+    nb_rows: 4
+    default: "Description"
+  - label: "Link"
+    id: link
+    type: link
+    default: "#"
+  
+blocks_label: "Tiles"
+
+sample:
+  settings:
+    title: "Local people solving local problems"
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non cupiditate quae nam molestias."
+    cta_button:
+      text: "Get started"
+      href: "#"
+  blocks:
+  - type: tile_item
+    icon: "fa-rocket"
+    title: "Rockets"
+    description: "We build rockets"
+    link: "#"
+  - type: tile_item
+    icon: "fa-chef"
+    title: "Chefs"
+    description: "We cook food"
+    link: "#"
+  - type: tile_item
+    icon: "fa-handshake"
+    title: "Synergy"
+    description: "We circleback"
+    link: "#"
+  - type: tile_item
+    icon: "fa-sparkles"
+    title: "Magic"
+    description: "Wow!"
+    link: "#"
+  
