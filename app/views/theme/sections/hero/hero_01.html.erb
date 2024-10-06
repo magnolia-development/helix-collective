@@ -1,0 +1,18 @@
+<section class="index-hero">
+  <%= video_tag "index_hero_bg.mp4", id: "hero-video", autoplay: true, muted: true, loop: true, poster: "index_hero_bg_poster.jpg" %>
+  <div class="index-hero-container">
+    <div class="index-hero-heading">
+      <h1><%= raw maglev_section.settings.title %></h1>
+      <p><%= raw maglev_section.settings.details %></p>
+      <a class="primary-button" href="<%= maglev_section.settings.cta_button.href %>">
+        <%= maglev_section.settings.cta_button.text %>
+        <i class="ml-2 fa-sharp-duotone fa-solid fa-arrow-right-long"></i>
+      </a>
+    </div>
+    <div class="index-hero-details">
+      <% maglev_section.blocks.each do |block| %>
+        <%= render "components/index_hero/detail_card", icon: block.settings.icon, title: block.settings.title, blurb: block.settings.description %>
+      <% end %>
+    </div>
+  </div>
+</section>

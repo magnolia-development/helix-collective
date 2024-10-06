@@ -2,13 +2,12 @@ name: "Index hero"
 category: hero
 site_scoped: false
 insert_button: true
-singleton: true
+singleton: false
 
 settings:
 - label: "Title"
   id: title
   type: text
-  default: My awesome title
 - label: "Details"
   id: details
   type: text
@@ -18,8 +17,9 @@ settings:
 - label: "CTA Button"
   id: cta_button
   type: link
-  default: 
-    text: "Button"
+  with_text: true
+  default:
+    text: "Get started"
     href: "#"
 
 blocks:
@@ -29,19 +29,17 @@ blocks:
   - label: "Icon"
     id: icon
     type: icon
-    default: "fa-rocket"
   - label: "Title"
     id: title
     type: text
-    default: "Title"
   - label: "Description"
     id: description
     type: text
     nb_rows: 4
-    default: "Description"
   - label: "Link"
     id: link
     type: link
+    with_text: false
     default: "#"
   
 blocks_label: "Tiles"
@@ -74,4 +72,4 @@ sample:
     title: "Magic"
     description: "Wow!"
     link: "#"
-  
+
